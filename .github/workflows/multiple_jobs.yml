@@ -1,0 +1,11 @@
+name: CICD
+on: push
+jobs:
+  compile_job:
+    runs-on: ubuntu-latest
+      steps:
+        - name: Compiling My Java App
+          run: |
+            pwd
+            ls
+            echo "Hello world"
