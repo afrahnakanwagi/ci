@@ -9,3 +9,13 @@ jobs:
             pwd
             ls
             echo "Hello world"
+
+  test_job:
+    needs: compile_job
+    runs-on: ubuntu-latest
+      steps:
+        - name: Testing our java app
+          run: echo "Running the Tests"
+
+  package_job:
+    needs: test_job
