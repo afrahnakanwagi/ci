@@ -19,3 +19,7 @@ jobs:
 
   package_job:
     needs: test_job
+    runs-on: ubuntu-latest
+      steps:
+        -name: Deploying Tests
+          run: echo "Packaging our java app for deployment"
